@@ -1,2 +1,4 @@
 m = 20
-print(m)
+p = 30
+k = m+p
+print(k)
