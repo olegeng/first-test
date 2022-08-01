@@ -1,3 +1,2 @@
-import maths 
-m = maths.pi
+m = 20
 print(m)
