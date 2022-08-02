@@ -1,0 +1,3 @@
+geforce = 12
+while geforce<10:
+	print('а')
