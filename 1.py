@@ -1,4 +1,6 @@
 ids = 0
+xxy=0
+aut=bool(True)
 xy=0
 x = 0
 y=0
@@ -11,16 +13,17 @@ if vibir1 == "Регістрація":
 	while xy==0:
 		new_log=input('Введіть логін:')
 		for x in logins:
-		    if x==new_log:
-		    	print('Такий логін вже є, придумайте новий.')
-		    if x!=new_log:
-		    	new_pass=input('Введіть пароль:')
-		    	perevirka_pass=input('Повторіть пароль:')
-		    	if new_pass==perevirka_pass:
-		    		logins.append(new_log)
-		    		Paswords.append(new_pass)
-		    		xy=xy+5
-		    		break
+			if x==new_log:
+				print('Такий логін вже є, придумайте новий.')
+			elif x != new_log:
+				new_pass=input('Введіть пароль:')
+				perevirka_pass=input('Повторіть пароль:')
+				if new_pass==perevirka_pass:
+					aut=bool(True)
+					logins.append(new_log)
+					Paswords.append(new_pass)
+					xy=xy+5
+					break
 if vibir1=='Авторизація':
 	sign=input('Введіть логін:')
 	passw=input('Введіть пароль:')
@@ -38,8 +41,13 @@ if vibir1=='Авторизація':
 			            numb+=1
 			            if sign==x:
 				            if passw == Paswords[numb]:
-					            z+=5
-					            print('Ви успішно авторизувались')
-					            continue
+				            	aut=bool(True)
+				            	z+=5
+				            	continue
 print(logins)
 print(Paswords)
+if aut==bool(True):
+	robit=input('Що будемо робити? \n- ')
+elif aut==bool(True):
+		print('F')
+

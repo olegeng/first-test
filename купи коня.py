@@ -1,31 +1,31 @@
-x=0
-A = ["Oleg Pavlish", "Petro Grigorenko", "Василь Петрович", "olegpa2005", 'user1212']
-B = ["Simon Petlura", "Mirage", "Ivan", "Petro Grigorenko", "user1212"]
-while x==0:
-work= input('Що будемо робити:')
-    if work == 'Додати інформацію':
-	    yak = input('В який список будемо добавляти? (A/B)')
-	    if yak == 'A':
-		    simv= input('Введіть символ який хочете добавити:')
-		    A.append(simv)
-		    print('Ваш список(А):',A)
-	    if yak == 'B':
-		    simv= input('Введіть символ який хочете добавити:')
-		    B.append(simv)
-		    print("Ваш список:",B)
-    if work == 'Знайти спільні елементи':
-	    i=0
-	    for k in A:
-	        for c in B:
-		        if k==c:
-			        i+=1
-			        print(str(i) + '-й елемент:' + str(c))
-    
-    
+logins = ['log123', 'Oleg Pavlish']
+Paswords = ['oleg2005', '12345678']
+def log1(sign,passw):
+	for x in logins:
+		numb=-1
+		numb+=1
+		if sign==x:
+			break
+			if passw!=Paswords[numb]:
+				while z==0:
+					numb= -1
+					print('Ви провалили авторизацію, спробуйте ще раз!')
+					sign=input('Введіть логін:')
+					passw=input('Введіть пароль:')
+					for x in logins:
+						numb=-1
+						numb+=1
+						if sign==x:
+							if passw == Paswords[numb]:
+								aut=bool(True)
+								z+=5
+								continue
+			elif passw==Paswords[numb]:
+				print('Ви успішно авторизувались')
+vibir1=input('Що будемо робити?\n-')
+if vibir1=='Авторизація':
+	sign=input('Введіть логін:')
+	passw=input('Введіть пароль:')
+	print(log1(sign,passw))
 
-
-
-
-
-
-
+	
